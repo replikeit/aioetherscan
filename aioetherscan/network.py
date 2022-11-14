@@ -22,7 +22,10 @@ class Network:
     _API_KINDS = {
         'eth': 'etherscan.io',
         'bsc': 'bscscan.com',
-        'avax': 'snowtrace.io'
+        'avax': 'snowtrace.io',
+        'polygon': 'polygonscan.com',
+        'optimism': 'optimistic.etherscan.io',
+        'arbitrum': 'arbiscan.io',
     }
     BASE_URL: str = None
 

@@ -24,7 +24,7 @@ class Network:
         'bsc': 'bscscan.com',
         'avax': 'snowtrace.io',
         'polygon': 'polygonscan.com',
-        'optimism': 'api-optimistic.etherscan.io',
+        'optimism': 'etherscan.io',
         'arbitrum': 'arbiscan.io',
     }
     BASE_URL: str = None
@@ -32,7 +32,10 @@ class Network:
     def __init__(self, api_key: str, api_kind: str, network: str,
                  loop: AbstractEventLoop = None, timeout: ClientTimeout = None, proxy: str = None) -> None:
         self._API_KEY = api_key
-        self._set_network(api_kind, network)
+        if api_kind == 'optimism':
+            self._set_network(api_kind, 'optimistic', scheme='https', path='api')
+        else:
+            self._set_network(api_kind, network)
 
         self._loop = loop or asyncio.get_event_loop()
         self._timeout = timeout

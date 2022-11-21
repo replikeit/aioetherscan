@@ -24,7 +24,7 @@ class Network:
         'bsc': 'bscscan.com',
         'avax': 'snowtrace.io',
         'polygon': 'polygonscan.com',
-        'optimism': 'optimistic.etherscan.io',
+        'optimism': 'api-optimistic.etherscan.io',
         'arbitrum': 'arbiscan.io',
     }
     BASE_URL: str = None

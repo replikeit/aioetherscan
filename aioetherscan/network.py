@@ -26,7 +26,9 @@ class Network:
         'polygon': 'polygonscan.com',
         'optimism': 'etherscan.io',
         'arbitrum': 'arbiscan.io',
-        'gnosis': 'gnosisscan.io'
+        'gnosis': 'gnosisscan.io',
+        'novaarb': 'api-nova.arbiscan.io',
+        'base': 'api.basescan.org'
     }
     BASE_URL: str = None
 

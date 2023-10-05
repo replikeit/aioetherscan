@@ -37,7 +37,7 @@ class Network:
         self._API_KEY = api_key
         if api_kind == 'optimism':
             self._set_network(api_kind, 'optimistic', scheme='https', path='api')
-        elif abi_key == 'novaarb':
+        elif api_kind == 'novaarb':
             self._set_network(api_kind, 'nova', scheme='https', path='api')
         else:
             self._set_network(api_kind, network)

@@ -27,8 +27,8 @@ class Network:
         'optimism': 'etherscan.io',
         'arbitrum': 'arbiscan.io',
         'gnosis': 'gnosisscan.io',
-        'novaarb': 'api-nova.arbiscan.io',
-        'base': 'api.basescan.org'
+        'novaarb': 'arbiscan.io',
+        'base': 'basescan.org'
     }
     BASE_URL: str = None
 
@@ -37,6 +37,8 @@ class Network:
         self._API_KEY = api_key
         if api_kind == 'optimism':
             self._set_network(api_kind, 'optimistic', scheme='https', path='api')
+        elif abi_key == 'novaarb':
+            self._set_network(api_kind, 'nova', scheme='https', path='api')
         else:
             self._set_network(api_kind, network)
 
